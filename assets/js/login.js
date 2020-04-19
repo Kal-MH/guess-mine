@@ -22,6 +22,7 @@ const logIn = (nickname) => {
   const socket = io("/");
   socket.emit(window.events.setNickname, { nickname });
   initSocket(socket);
+  body.className = LOGGED_IN;
 };
 
 if (loginForm) {
@@ -31,6 +32,5 @@ if (loginForm) {
 if (nickname == null) {
   body.className = LOGGED_OUT;
 } else {
-  body.className = LOGGED_IN;
   logIn(nickname);
 }
