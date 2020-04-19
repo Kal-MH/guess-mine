@@ -21,10 +21,11 @@ const handleSendMsg = (event) => {
   input.value = "";
   appendMsg(value);
 };
-
-export const handleNewMsg = ({ message, nickname }) =>
-  appendMsg(message, nickname);
-
 if (sendMsg) {
   sendMsg.addEventListener("submit", handleSendMsg);
 }
+
+export const handleNewMsg = ({ message, nickname }) =>
+  appendMsg(message, nickname);
+export const disableChat = () => (sendMsg.style.display = "none");
+export const enableChat = () => (sendMsg.style.display = "block");

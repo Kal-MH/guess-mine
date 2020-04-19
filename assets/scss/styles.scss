@@ -4,6 +4,8 @@
 @import "./login.scss";
 @import "./notification.scss";
 @import "./chat.scss";
+@import "./game.scss";
+@import "./board.scss";
 
 * {
   box-sizing: border-box;
@@ -36,7 +38,7 @@ body {
   }
   &.loggedIn {
     .gameContainer {
-      display: block;
+      display: flex;
     }
   }
 }
